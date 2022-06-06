@@ -1,0 +1,545 @@
+/* ----------------------Cabecera y estilos globales------------------------- */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    background-color: #FDF7E4;
+}
+.cabecera_principal{
+    width: 100%;
+    
+}
+.caja_tres_color{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.caja{
+    height: 10px;
+}
+.caja.turqueza{
+    background-color: #5fa78f;
+}
+.caja.azul{
+    background-color: #c29159;
+}
+.caja.verde{
+    background-color: #374c3b;
+}
+.contenido_cabecera{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.titulo_cabecera{
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    font-weight: bold;
+    margin-left: 50px;
+    color: #c29159;
+    font-size: 50px;
+}
+.btn_flotante{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 52px;
+    background: #5a070c;
+    width: 350px;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom-left-radius: 20px;
+}
+.menu_cabecera{
+    width: 100%;
+    background-color: #5a070c;
+    text-align: center;
+}
+.menu_cabecera ul{
+    list-style: none;
+}
+.menu_cabecera ul li{
+    display: inline-block;
+
+}
+.menu_cabecera ul li a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px 40px;
+    text-align: center;
+}
+
+/* ----------------------Slider-------------------------- */
+
+.slider{
+    width: 100%;
+    height: 700px;
+    background-color: transparent;
+    background: url('../img/slider.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    /* border-bottom: 1px solid #ccc; */
+
+}
+.slider-slogan{
+    font-size: 8em;
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+    text-shadow: 10px 10px 15px  rgb(0,0,0);
+}
+.slider .bloques_contenido{
+    display: flex;
+    align-items: flex-start;
+    width: 75%;
+    overflow: hidden;
+}
+.bloques_contenido .caja{
+    width: 33.3%;
+    height: 300px;
+    border-bottom: 10px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.bloques_contenido .caja a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 32px;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.bloques_contenido .caja a span{
+    font-weight: bold;
+}
+
+.bloques_contenido .caja.turqueza{
+    border-bottom: 10px solid rgb(2, 184, 191);
+    background: rgba(2, 184, 191,.7);
+}
+.bloques_contenido .caja.azul{
+    border-bottom: 10px solid rgb(25, 144, 206);
+    background: rgba(25, 144, 206,.7);
+    height: 280px;
+}
+.bloques_contenido .caja.verde{
+    border-bottom: 10px solid rgb(7, 188, 131);
+    background: rgba(7, 188, 131,.7);
+}
+
+/* ----------------------Nosotros-------------------------- */
+
+.column_info_container{
+    display: flex;
+    justify-content: center;
+}
+.column_info{
+    width: 33.3%;
+    padding: 30px;
+    margin: 20px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,.1);
+    opacity: 0;
+    max-width: 500px;
+}
+
+.nosotros_main_title{
+    font-size: 3em;
+    margin: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-transform: uppercase;
+    color: #555555;
+    display: flex;
+    text-align: center;
+    margin-bottom: 50px;
+    flex-direction: column;
+    text-decoration: underline;
+}
+.valores_mision_vision_container{
+    padding: 10px 30px 100px 30px;
+}
+.sub_container_valor_mision_vision{
+    display: flex;
+    justify-content: space-between;
+
+}
+.sub_container_valor_mision_vision > div{
+    width: 32%;
+    padding: 30px;
+    background-color: #fdf7e8;
+    box-shadow: 1px 3px 6px rgba(0,0,0,.2);
+    border-radius: 15px;
+}
+.mision_img,
+.valores_img,
+.vision_img{
+    width: 150px;
+    display: block;
+    margin: 30px auto;
+}
+.mision_title,
+.valores_title,
+.vision_title{
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #a03c42;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    /* font-weight: 300; */
+    font-weight: bold;
+
+}
+.mision_text,
+.valores_text,
+.vision_text{
+    font-size: 18px;
+    line-height: 25px;
+    color: #777777;
+    text-align: justify;
+    
+}
+.lista_valores{
+    list-style: none;
+}
+.lista_valores li{
+    margin: 8px 0px;
+    background: #f2ece5;
+    padding-left: 50px;
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: #777777;
+    font-size: 18px;
+}
+.lista_valores li span{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 15px solid #fff;
+    border-width: thick;
+    background: #dd9434;
+    position: absolute;
+    left: -10px;
+}
+/* ----------------------Nosotros-------------------------- */
+
+
+
+.nosotros{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 300px;
+}
+.nosotros > h2,
+.nuestros_medicos > h2,
+.clientes_satisfechos > h2,
+.contacto > h2,
+.citas_medicas > h2{
+    text-align: center;
+    font: normal normal normal 70px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;
+    color: #f0841f;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.nosotros .cuadrito,
+.servicios .cuadrito,
+.nuestros_medicos .cuadrito,
+.clientes_satisfechos .cuadrito,
+.contacto .cuadrito,
+.citas_medicas .cuadrito{    
+    background-color: #f0841f;
+    display: block;
+    height: 15px;
+    width: 15px;
+    margin: auto;
+    margin-bottom: 70px;
+    margin-top: 20px;
+}
+.contenido_nosotros{
+    display: flex;
+}
+.contenido_nosotros > div{
+    width: 50%;
+    padding: 0px 25px;
+    padding-top: 20px;
+    font: normal normal normal 15px/1.4em 'open sans',sans-serif;
+    color: #666666;
+}
+.contenido_nosotros .right{
+    border-left: 1px solid #ccc;
+}
+.contenido_nosotros .right a{
+    display: block;
+    color: #666666;
+}
+.contenido_nosotros .left h3{
+    font-size: 30px;
+    line-height: 40px;
+}
+.contenido_nosotros .left ul{
+    padding-left: 20px;
+}
+
+/* ----------------------Nuestros medicos-------------------------- */
+
+.nuestros_medicos{
+    width: 100%;
+    margin-bottom: 70px;
+}
+.container_doctores{
+    width: 74%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.container_doctores > div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 33.3%;
+    margin-top: 30px;
+}
+.container_doctores > div img{
+    width: 200px;
+    margin-bottom: 30px;
+}
+.container_doctores > div img.turqueza{
+    border-bottom: 10px solid #f0841f;
+}
+.container_doctores > div img.azul{
+    border-bottom: 10px solid #f0841f;
+}
+.container_doctores > div img.verde{
+    border-bottom: 10px solid #f0841f;
+}
+
+.container_doctores > div h2{
+    font: normal normal normal 24px/1.4em 'open sans',sans-serif;
+    color: #333333;
+    text-align: center;
+}
+.container_doctores > div p{
+    text-align: center;
+    font: normal normal normal 15px/1.4em 'open sans',sans-serif;
+    color: #666666;
+}
+
+/* ----------------------Paralax-------------------------- */
+
+.paralax{
+    width: 100%;
+    height: 800px;
+    background: url('../img/paralaximg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    clip-path: polygon(0 26%, 100% 0, 100% 100%, 0% 100%);
+    position: relative;
+}
+.paralax-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.paralax-overlay h2 {
+    color: #fff;
+    font-size: 6em;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 10px 10px 15px  rgb(0,0,0);
+}
+
+
+/* ----------------------Clientes Satisfechos-------------------------- */
+
+.clientes_satisfechos{
+    background: #5a070c;
+    color: #ffffff;
+    padding: 70px;
+    margin-bottom: 70px;
+    height: 700px;
+    clip-path: ellipse(66% 69% at 52% 23%);
+
+
+
+
+}
+.clientes_satisfechos > h2{
+    color: #ffffff;
+}
+.clientes_satisfechos .cuadrito{
+    background-color: #ffffff;
+}
+.container_testimonios{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+.container_testimonios > div{
+    text-align: center;
+    margin: 0px 20px;
+}
+.container_testimonios > div i{
+    font-size: 30px;
+    margin: 70px 0px;
+    color: #6dd2b2;
+    text-align: center;
+}
+.container_testimonios > div p{
+    font: normal normal normal 13px/1.4em 'open sans',sans-serif;
+    font-style: italic;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+/* ----------------------Contacto-------------------------- */
+
+.contacto{
+    width: 100%;
+}
+.contacto > img{
+    margin: auto;
+    display: block;
+    margin-bottom: 40px;
+    max-width: 100%;
+}
+.contacto .container_info{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.contacto .container_info > div{
+    width: 50%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.contacto .container_info > .right{
+    border-left: 1px solid #cccccc;
+}
+.contacto .container_info > div h3{
+    font: normal normal normal 24px/1.4em 'open sans',sans-serif;
+    color: #333333;
+    margin-bottom: 20px;
+}
+.contacto .container_info > div p{
+    font: normal normal normal 15px/1.4em 'open sans',sans-serif;
+    color: #666666;
+    line-height: 25px;
+}
+.map {
+    display: block;
+    width: 70%;
+    margin: auto;
+}
+
+/* ----------------------Footer-------------------------- */
+
+footer{
+    width: 100%;
+    background-color: #c29159;
+    padding-top: 80px;
+    text-align: center;
+
+}
+footer .container_info{
+    display: flex;
+    width: 65%;
+    margin: auto;
+}
+footer .container_info .right form input{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+}
+footer .container_info .right form button{
+    padding: 8px 30px;
+    border: none;
+    background-color: #02b8bf;
+    color: #ffffff;
+    float: right;
+
+}
+footer .container_info .left {
+    color: #fff;
+}
+footer .container_info .left i{
+    font-size: 20px;
+    margin: 20px 6px;
+}
+footer .container_info > div{
+    width: 50%;
+    text-align: center;
+    padding: 0px 30px;
+    margin-bottom: 20px;
+}
+footer .up{
+    color: #970c16;
+    font-size: 30px;
+    cursor: pointer;
+}
+.mini_paralax{
+    background: url('../img/paralaximg.jpg');
+    background-size: cover;
+    background-position: 0px 600px;
+    width: 100%;
+    height: 6px;
+}
+
+
+/* ----------------------Citas medicas-------------------------- */
+
+.citas_medicas{
+    width: 100%;
+}
+.citas_medicas > h2{
+    margin-top: 100px;
+    text-transform: initial;
+}
+.container-menu{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    margin: auto;
+    grid-gap: 20px;
+}
+.container-menu img{
+    max-width: 100%;
+    border-radius: 5px ;
+    box-shadow: 0px 1px 3px rgba(0,0,0,.25);
+}
